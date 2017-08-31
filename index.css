@@ -1,0 +1,195 @@
+/* Mac wrapper */
+.pca-anim {
+  transition: all 0.5s;
+}
+.pca-hold {
+  margin: 0 auto;
+  width: 300px;
+}
+.pca-hold.mac .pca-main {
+  display: block;
+  position: relative;
+  background-color: #fff;
+  border: 9px solid #2d2d2d;
+  height: 192px;
+  border-top-left-radius: 9px;
+  border-top-right-radius: 9px;
+}
+.pca-hold.mac .pca-main:after {
+  content: '';
+  position: absolute;
+  top: -8px;
+  left: 50%;
+  -webkit-transform: translate(-50%,0);
+  -ms-transform: translate(-50%,0);
+  -o-transform: translate(-50%,0);
+  transform: translate(-50%,0);
+  width: 3px;
+  height: 3px;
+  background-color: #959595;
+  border-radius: 100%;
+}
+.pca-hold.mac .pca-inner {
+  display: block;
+}
+.pca-hold.mac .pca-sub {
+  display: block;
+  text-align: center;
+  position: relative;
+  height: 15px;
+}
+.pca-hold.mac .pca-sub .pca-top {
+  position: absolute;
+  bottom: 0;
+  left: -37.5px;
+  display: block;
+  width: 375px;
+  height: 15px;
+  border-bottom-left-radius: 33px;
+  border-bottom-right-radius: 33px;
+  background-color: #e8e8e8;
+  opacity: 1;
+  z-index: 2;
+}
+.pca-hold.mac .pca-sub .pca-bot {
+  display: block;
+  width: 120px;
+  height: 9px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  background-color: #B1B1B1;
+  border-radius: 0 0 135px 135px;
+  opacity: 1;
+  z-index: 2;
+  -webkit-transform: translate(-50%,0);
+  -ms-transform: translate(-50%,0);
+  -o-transform: translate(-50%,0);
+  transform: translate(-50%,0);
+}
+
+/*Phone wrapper*/
+
+.pca-hold.iphone {
+  width: 300px;
+}
+.pca-hold.iphone .pca-main {
+  display: block;
+  position: relative;
+  background-color: #fff;
+  border: 9px solid #1d2d2d;
+  border-top: 69px solid #1d2d2d;
+  border-bottom: 70.8px solid #1d2d2d;
+  border-radius: 33.9px;
+  height: 615.6px;
+  box-shadow: 0 0 0 3px #C6C7CA;
+}
+.pca-hold.iphone .pca-main:after {
+  content: '';
+  position: absolute;
+  top: -39px;
+  left: 55%;
+  -webkit-transform: translate(-50%,0);
+  -ms-transform: translate(-50%,0);
+  -o-transform: translate(-50%,0);
+  transform: translate(-50%,0);
+  width: 9px;
+  height: 9px;
+  background-color: #959595;
+  border-radius: 100%;
+  -webkit-transform: translate(-54px,0);
+  -ms-transform: translate(-54px,0);
+  -o-transform: translate(-54px,0);
+  transform: translate(-54px,0);
+}
+.pca-hold.iphone .pca-main:before {
+  content: "";
+  position: absolute;
+  top: -15px;
+  left: 55%;
+  opacity: 1;
+  width: 60px;
+  height: 3px;
+  -webkit-transform: translate(-27px,-22.5px);
+  -ms-transform: translate(-27px,-22.5px);
+  -o-transform: translate(-27px,-22.5px);
+  transform: translate(-27px,-22.5px);
+  border-radius: 3px;
+  background-color: #959595;
+}
+.pca-hold.iphone .pca-inner {
+  display: block;
+}
+.pca-hold.iphone .pca-sub {
+  display: block;
+  text-align: center;
+  position: relative;
+  height: 0;
+}
+.pca-hold.iphone .pca-sub .pca-bot {
+  border-radius: 100%;
+  width: 42px;
+  height: 42px;
+  display: block;
+  margin: 0 auto;
+  background-color: transparent;
+  z-index: 2;
+  box-shadow: 0 0 0 3.3px #636670;
+  -webkit-transform: translate(0,-56.4px);
+  -ms-transform: translate(0,-56.4px);
+  -o-transform: translate(0,-56.4px);
+  transform: translate(0,-56.4px);
+}
+
+/* iPad wrapper */
+
+.pca-hold.ipad {
+  width: 300px;
+}
+.pca-hold.ipad .pca-main {
+  display: block;
+  position: relative;
+  background-color: #fff;
+  border: 21px solid #1d2d2d;
+  border-bottom: 30px solid #1d2d2d;
+  border-radius: 15px;
+  height: 372px;
+}
+.pca-hold.ipad .pca-main:after {
+  content: '';
+  position: absolute;
+  top: -8px;
+  left: 50%;
+  -webkit-transform: translate(-50%,0);
+  -ms-transform: translate(-50%,0);
+  -o-transform: translate(-50%,0);
+  transform: translate(-50%,0);
+  width: 3.3px;
+  height: 3.3px;
+  background-color: #959595;
+  border-radius: 100%;
+}
+.pca-hold.ipad .pca-inner {
+  display: block;
+}
+.pca-hold.ipad .pca-sub {
+  display: block;
+  text-align: center;
+  position: relative;
+  height: 0;
+}
+.pca-hold.ipad .pca-sub .pca-bot {
+  border-radius: 100%;
+  width: 18px;
+  height: 18px;
+  display: block;
+  background-color: transparent;
+  z-index: 2;
+  margin: -6px auto 0 auto;
+  box-shadow: 0 0 0 1px rgba(255,255,255,0.6);
+  -webkit-transform: translate(0,-100%);
+  -ms-transform: translate(0,-100%);
+  -o-transform: translate(0,-100%);
+  transform: translate(0,-100%);
+}
+
