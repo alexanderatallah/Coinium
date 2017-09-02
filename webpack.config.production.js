@@ -1,6 +1,7 @@
 /* eslint-disable */
 
 var path = require("path");
+var CopyWebpackPlugin = require('copy-webpack-plugin');
 var webpack = require("webpack");
 
 module.exports = {
@@ -10,10 +11,12 @@ module.exports = {
   ],
   output: {
     path: path.join(__dirname, "dist"),
-    filename: "bundle.js",
-    publicPath: "/dist/"
+    filename: "bundle.js"
   },
   plugins: [
+    new CopyWebpackPlugin([
+      { from: '*.html' }
+    ]),
     new webpack.DefinePlugin({
       "process.env": {
         "NODE_ENV": JSON.stringify("production")

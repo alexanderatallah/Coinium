@@ -10,15 +10,25 @@ var compiler = webpack(config);
 
 var serverPort = process.env.PORT || 3000;
 
-app.use(require("webpack-dev-middleware")(compiler, {
+var devMiddleware = require('webpack-dev-middleware');
+
+app.use(devMiddleware(compiler, {
   noInfo: true,
   publicPath: config.output.publicPath
 }));
 
 app.use(require("webpack-hot-middleware")(compiler));
 
-app.get("*", function(req, res) {
-  res.sendFile(path.join(__dirname, "index.html"));
+app.get("*", function(req, res, next) {
+  var filename = path.join(compiler.outputPath, 'index.html');
+  compiler.outputFileSystem.readFile(filename, function(err, result){
+    if (err) {
+      return next(err);
+    }
+    res.set('content-type','text/html');
+    res.send(result);
+    res.end();
+  });
 });
 
 app.listen(serverPort, "localhost", function (err) {

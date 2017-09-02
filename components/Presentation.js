@@ -191,7 +191,7 @@ export default class Presentation extends React.Component {
             </Typography>
           </Grid>
           <Signup />
-          <Grid align="center" style={{marginTop: 10}}>
+          <Typography align="center" style={{marginTop: 10}}>
             <Button raised color="primary">
               <Icon color="contrast" style={iconStyle}>insert_drive_file</Icon>
               Whitepaper
@@ -200,7 +200,7 @@ export default class Presentation extends React.Component {
               <Icon color="contrast" style={iconStyle}>insert_drive_file</Icon>
               S1 Strategy
             </Button>
-          </Grid>
+          </Typography>
         </Slide>
       </Deck>
     )
