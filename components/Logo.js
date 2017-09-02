@@ -20,7 +20,7 @@ class Logo extends Component {
 
     const logoStyle = {
       fontSize: 94,
-      color: colors.tertiary,
+      color: colors.quarternary,
       fontFamily: "Open Sans Condensed",
       fontWeight: 700,
       position: 'relative',

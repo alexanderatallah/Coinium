@@ -1,31 +1,35 @@
-/* Mac wrapper */
+/* Device animation */
 .pca-anim {
   transition: all 0.5s;
 }
 .pca-hold {
   margin: 0 auto;
-  width: 300px;
+}
+
+/* Mac wrapper */
+.pca-hold.mac {
+  width: 400px;
 }
 .pca-hold.mac .pca-main {
   display: block;
   position: relative;
   background-color: #fff;
-  border: 9px solid #2d2d2d;
-  height: 192px;
-  border-top-left-radius: 9px;
-  border-top-right-radius: 9px;
+  border: 12px solid #2d2d2d;
+  height: 256px;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
 }
 .pca-hold.mac .pca-main:after {
   content: '';
   position: absolute;
-  top: -8px;
+  top: -10px;
   left: 50%;
   -webkit-transform: translate(-50%,0);
   -ms-transform: translate(-50%,0);
   -o-transform: translate(-50%,0);
   transform: translate(-50%,0);
-  width: 3px;
-  height: 3px;
+  width: 4px;
+  height: 4px;
   background-color: #959595;
   border-radius: 100%;
 }
@@ -36,30 +40,30 @@
   display: block;
   text-align: center;
   position: relative;
-  height: 15px;
+  height: 20px;
 }
 .pca-hold.mac .pca-sub .pca-top {
   position: absolute;
   bottom: 0;
-  left: -37.5px;
+  left: -50px;
   display: block;
-  width: 375px;
-  height: 15px;
-  border-bottom-left-radius: 33px;
-  border-bottom-right-radius: 33px;
+  width: 500px;
+  height: 20px;
+  border-bottom-left-radius: 44px;
+  border-bottom-right-radius: 44px;
   background-color: #e8e8e8;
   opacity: 1;
   z-index: 2;
 }
 .pca-hold.mac .pca-sub .pca-bot {
   display: block;
-  width: 120px;
-  height: 9px;
+  width: 160px;
+  height: 12px;
   position: absolute;
   top: 0;
   left: 50%;
   background-color: #B1B1B1;
-  border-radius: 0 0 135px 135px;
+  border-radius: 0 0 180px 180px;
   opacity: 1;
   z-index: 2;
   -webkit-transform: translate(-50%,0);
@@ -71,50 +75,50 @@
 /*Phone wrapper*/
 
 .pca-hold.iphone {
-  width: 300px;
+  width: 180px;
 }
 .pca-hold.iphone .pca-main {
   display: block;
   position: relative;
   background-color: #fff;
-  border: 9px solid #1d2d2d;
-  border-top: 69px solid #1d2d2d;
-  border-bottom: 70.8px solid #1d2d2d;
-  border-radius: 33.9px;
-  height: 615.6px;
-  box-shadow: 0 0 0 3px #C6C7CA;
+  border: 5.4px solid #1d2d2d;
+  border-top: 41.4px solid #1d2d2d;
+  border-bottom: 42.48px solid #1d2d2d;
+  border-radius: 20.34px;
+  height: 369.36px;
+  box-shadow: 0 0 0 1.8px #C6C7CA;
 }
 .pca-hold.iphone .pca-main:after {
   content: '';
   position: absolute;
-  top: -39px;
+  top: -23.4px;
   left: 55%;
   -webkit-transform: translate(-50%,0);
   -ms-transform: translate(-50%,0);
   -o-transform: translate(-50%,0);
   transform: translate(-50%,0);
-  width: 9px;
-  height: 9px;
+  width: 5.4px;
+  height: 5.4px;
   background-color: #959595;
   border-radius: 100%;
-  -webkit-transform: translate(-54px,0);
-  -ms-transform: translate(-54px,0);
-  -o-transform: translate(-54px,0);
-  transform: translate(-54px,0);
+  -webkit-transform: translate(-32.4px,0);
+  -ms-transform: translate(-32.4px,0);
+  -o-transform: translate(-32.4px,0);
+  transform: translate(-32.4px,0);
 }
 .pca-hold.iphone .pca-main:before {
   content: "";
   position: absolute;
-  top: -15px;
+  top: -9px;
   left: 55%;
   opacity: 1;
-  width: 60px;
-  height: 3px;
-  -webkit-transform: translate(-27px,-22.5px);
-  -ms-transform: translate(-27px,-22.5px);
-  -o-transform: translate(-27px,-22.5px);
-  transform: translate(-27px,-22.5px);
-  border-radius: 3px;
+  width: 36px;
+  height: 1.8px;
+  -webkit-transform: translate(-16.2px,-13.5px);
+  -ms-transform: translate(-16.2px,-13.5px);
+  -o-transform: translate(-16.2px,-13.5px);
+  transform: translate(-16.2px,-13.5px);
+  border-radius: 1.8px;
   background-color: #959595;
 }
 .pca-hold.iphone .pca-inner {
@@ -128,17 +132,17 @@
 }
 .pca-hold.iphone .pca-sub .pca-bot {
   border-radius: 100%;
-  width: 42px;
-  height: 42px;
+  width: 25.2px;
+  height: 25.2px;
   display: block;
   margin: 0 auto;
   background-color: transparent;
   z-index: 2;
-  box-shadow: 0 0 0 3.3px #636670;
-  -webkit-transform: translate(0,-56.4px);
-  -ms-transform: translate(0,-56.4px);
-  -o-transform: translate(0,-56.4px);
-  transform: translate(0,-56.4px);
+  box-shadow: 0 0 0 1.98px #636670;
+  -webkit-transform: translate(0,-33.84px);
+  -ms-transform: translate(0,-33.84px);
+  -o-transform: translate(0,-33.84px);
+  transform: translate(0,-33.84px);
 }
 
 /* iPad wrapper */

@@ -1,12 +1,13 @@
 import React from "react"
 import $ from "jquery"
 import Button from 'material-ui/Button'
+import Grid from 'material-ui/Grid'
 import Icon from 'material-ui/Icon'
+import Typography from 'material-ui/Typography'
 import {
   BlockQuote, Cite, Deck, Fill, Fit, Heading, Image,
   Layout, Link, ListItem, List, Quote, Slide, Text,
-  Appear, SlideSet,
-  TableBody, TableHeader, TableHeaderItem, TableItem, TableRow, Table
+  Appear, SlideSet
 } from "spectacle"
 import Signup from "./Signup"
 import Logo from "./Logo"
@@ -72,55 +73,17 @@ export default class Presentation extends React.Component {
       </Heading>
     )
   }
-  // renderWifi() {
-  //   return (
-  //     <Slide id="wifi" bgColor="white">
-  //       <Heading size={2}>WiFi</Heading>
-  //       <Layout>
-  //         <Fill>
-  //           <Text>Network</Text>
-  //           <Text>Foundry</Text>
-  //         </Fill>
-  //         <Fill>
-  //           <Text>Password</Text>
-  //           <Text>foundry98103</Text>
-  //         </Fill>
-  //       </Layout>
-  //       <Text style={{ marginBottom: 0 }}>
-  //         <Link href="https://twitter.com/seattlejs">
-  //           <Image
-  //             height="1.5em"
-  //             src={images.logoTwitter}
-  //             style={{ verticalAlign: "middle" }}
-  //           />
-  //           @SeattleJS
-  //         </Link>
-  //       </Text>
-  //       <Text style={{ marginTop: 0, marginBottom: "3em" }}>
-  //         <Link href="https://twitter.com/hashtag/SeattleJSConf?src=hash">
-  //           <Image
-  //             height="1.5em"
-  //             src={images.logoTwitter}
-  //             style={{ verticalAlign: "middle" }}
-  //           />
-  //           #SeattleJSConf
-  //         </Link>
-  //       </Text>
-  //     </Slide>
-  //   )
-  // }
 
   render() {
-    const skylineBg = {
+    const skylineBgStyle = {
       backgroundImage: `url(${images.bg})`,
       backgroundRepeat: "no-repeat",
       backgroundPosition: "bottom center",
       backgroundSize: "105% auto"
     }
 
-    const sponsor = {
-      display: "block",
-      marginBottom: "1.5em"
+    const iconStyle = {
+      marginRight: 8
     }
 
     return (
@@ -130,53 +93,63 @@ export default class Presentation extends React.Component {
         controls={true}
         theme={theme}
         transition={["slide"]}
-        transitionDuration={500}
-      >
-        <Slide style={skylineBg} id="home">
-          <Logo motto={true} icon={false} />
+        transitionDuration={500} >
+
+        <Slide style={skylineBgStyle} id="home">
+          <Logo motto={true} icon={true} />
           <Signup />
         </Slide>
 
         <Slide bgImage={images.bg} bgDarken={0.75} id="info">
-          <Heading size={1} fit textColor="primary">
-            Buy tokens
+          <Heading size={1} fit caps lineHeight={1} textColor="tertiary">
+            The Coin of Coins
           </Heading>
           <Appear fid="1">
-            <Heading size={1} fit textColor="tertiary">
-              of the same utility
+            <Heading size={1} fit caps textColor="primary">
+              Buy one Coinium...
             </Heading>
           </Appear>
           <Appear fid="2">
-            <Heading size={1} fit textColor="primary">
-              and write a bit more here...
+            <Heading size={1} fit caps textColor="tertiary">
+              Get a digital coin locker in return...
             </Heading>
+          </Appear>
+          <Appear fid="3">
+            <Text textSize="1.5em" margin="20px 0px 0px" bold textColor="primary">
+              Which our experts fill with the best cryptocurrencies over time
+            </Text>
           </Appear>
         </Slide>
 
-        <Slide bgColor="black">
-          <BlockQuote>
+        {/*
+
+        <Slide bgColor="white">
+          <BlockQuote textColor="secondary">
             <Quote>A nice quote</Quote>
             <Cite>Vitalik Buterin</Cite>
           </BlockQuote>
         </Slide>
 
         <Slide bgColor="secondary" textColor="primary">
+          <Heading size={1} textColor="white">
+            How it works
+          </Heading>
           <List>
-            <ListItem>Feature 1</ListItem>
-            <Appear><ListItem>Feature 2</ListItem></Appear>
-            <Appear><ListItem>Feature 3</ListItem></Appear>
-            <Appear><ListItem>Feature 4</ListItem></Appear>
-            <Appear><ListItem>And...</ListItem></Appear>
+            <ListItem>Purchase one Coinium to buy a "locker"</ListItem>
+            <Appear><ListItem>Lockers have a specific utility, like payments or digital storage</ListItem></Appear>
+            <Appear><ListItem>Our advisory team vets cryptocurrencies to put in lockers</ListItem></Appear>
+            <Appear><ListItem>Your lockers get filled with these tokens over time</ListItem></Appear>
+            <Appear><ListItem>You can use them whenever you want!</ListItem></Appear>
           </List>
-        </Slide>
+        </Slide> */}
         
         <Slide align="flex-start" bgColor="primary" id="mobile">
           <Heading size={3} textColor="secondary">
-            Everywhere you'd want it
+            Everywhere you'll want it
           </Heading>
           <br />
           <Fill width="100%">
-            <div className='pca-hold mac' ref={(e) => this.phoneEl = e}>
+            <div className='pca-hold pca-anim mac' ref={(e) => this.phoneEl = e}>
               <div className='pca-anim pca-main' style={{position: 'relative'}}>
                 <Logo largeIcon={true} motto={false} name={false}
                   style={{position: 'absolute', top: '50%', transform: 'translateY(-50%)'}} />
@@ -192,7 +165,6 @@ export default class Presentation extends React.Component {
               </div>
             </div>
           </Fill>
-      
         </Slide>
 
         <Slide bgColor="primary" id="team">
@@ -213,59 +185,23 @@ export default class Presentation extends React.Component {
 
         <Slide bgColor="primary" id="signup">
           <Logo motto={false} />
+          <Grid>
+            <Typography>
+              Upcoming Token Sales
+            </Typography>
+          </Grid>
           <Signup />
-          <Button raised color="primary">
-            <Icon color="contrast">insert_drive_file</Icon>
-            Whitepaper
-          </Button>
-          <Button raised color="accent">
-            <Icon color="contrast">insert_drive_file</Icon>
-            S1 Strategy
-          </Button>
+          <Grid align="center" style={{marginTop: 10}}>
+            <Button raised color="primary">
+              <Icon color="contrast" style={iconStyle}>insert_drive_file</Icon>
+              Whitepaper
+            </Button>
+            <Button raised color="accent">
+              <Icon color="contrast" style={iconStyle}>insert_drive_file</Icon>
+              S1 Strategy
+            </Button>
+          </Grid>
         </Slide>
-        {/* <Slide bgColor="primary">
-          <Heading size={4} caps textColor="secondary" bgColor="white" margin={10}>
-            Upcoming Token Baskets
-          </Heading>
-          <Layout>
-            <Table>
-              <TableHeader>
-                <TableRow>
-                  <TableHeaderItem/>
-                  <TableHeaderItem>2011</TableHeaderItem>
-                  <TableHeaderItem>2013</TableHeaderItem>
-                  <TableHeaderItem>2015</TableHeaderItem>
-                </TableRow>
-              </TableHeader>
-              <TableBody>
-                <TableRow>
-                  <TableItem>None</TableItem>
-                  <TableItem>61.8%</TableItem>
-                  <TableItem>39.6%</TableItem>
-                  <TableItem>35.0%</TableItem>
-                </TableRow>
-                <TableRow>
-                  <TableItem>Pineapple</TableItem>
-                  <TableItem>28.3%</TableItem>
-                  <TableItem>54.5%</TableItem>
-                  <TableItem>61.5%</TableItem>
-                </TableRow>
-                <TableRow>
-                  <TableItem>Pepperoni</TableItem>
-                  <TableItem/>
-                  <TableItem>50.2%</TableItem>
-                  <TableItem>77.2%</TableItem>
-                </TableRow>
-                <TableRow>
-                  <TableItem>Olives</TableItem>
-                  <TableItem/>
-                  <TableItem>24.9%</TableItem>
-                  <TableItem>55.9%</TableItem>
-                </TableRow>
-              </TableBody>
-            </Table>
-          </Layout>
-        </Slide> */}
       </Deck>
     )
   }

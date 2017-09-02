@@ -21,7 +21,7 @@ export default class Signup extends Component {
   render() {
     const inputStyle = {
       fontSize: 20,
-      width: 232
+      width: 262
     }
 
     const helperStyle = {
@@ -38,7 +38,7 @@ export default class Signup extends Component {
           style={inputStyle} /> */}
         <FormControl style={inputStyle}>
           <InputLabel htmlFor="email-helper">
-            Sign up for the token sale
+            Sign up for the S1 token sale
           </InputLabel>
           <Input id="email-helper"
             fullWidth
