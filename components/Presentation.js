@@ -54,12 +54,12 @@ export default class Presentation extends React.Component {
 
   rotateDevice() {
     const $el = $(this.phoneEl)
-    if ($el.hasClass('mac')) {
-      $el.removeClass('mac').addClass('ipad')
+    if ($el.hasClass('iphone')) {
+      $el.removeClass('iphone').addClass('ipad')
     } else if ($el.hasClass('ipad')) {
-      $el.removeClass('ipad').addClass('iphone')
-    } else if ($el.hasClass('iphone')) {
-      $el.removeClass('iphone').addClass('mac')
+      $el.removeClass('ipad').addClass('mac')
+    } else if ($el.hasClass('mac')) {
+      $el.removeClass('mac').addClass('iphone')
     }
   }
 
@@ -84,6 +84,11 @@ export default class Presentation extends React.Component {
 
     const iconStyle = {
       marginRight: 8
+    }
+
+    const bioStyle = {
+      margin: 10,
+      textAlign: "left"
     }
 
     return (
@@ -142,14 +147,63 @@ export default class Presentation extends React.Component {
             <Appear><ListItem>You can use them whenever you want!</ListItem></Appear>
           </List>
         </Slide> */}
-        
+
+        <Slide bgColor="primary" id="team">
+          <Heading caps fit>Selection Team</Heading>
+          <Layout>
+            <Fill>
+              <Typography textColor="secondary" style={bioStyle}>
+                <strong>Vinny Lingham:</strong> Founder/CEO of Civic.  Civic had one of the largest and most successful offerings.  Vinny is also a frequent speaker on blockchain technologies and industry trends.  He was previously the founder of Gyft (acq by FirstData) and Yola.  Vinny is based in silicon valley.
+              </Typography>
+            </Fill>
+            <Fill>
+              <Typography textColor="secondary" style={bioStyle}>
+                <strong>Noah Kindler:</strong> Noah is an EIR at GE Ventures and previously was VP Technology/Operations at Avira, the world’s second largest consumer security company with 300m+ users.  Noah has a BS in Computer Science from Stanford University, an MBA (with distinction) from Harvard Business School and was a consultant at McKinsey & Company.  Noah has founded companies accepted into YCombinator and StartX.  Noah is based in Silicon Valley.
+              </Typography>
+            </Fill>
+          </Layout>
+          <Layout>
+            <Fill>
+              <Typography textColor="secondary" style={bioStyle}>
+                <strong>George Li:</strong> George is the Founder/CEO of WeTrust.io, a successful identity token company.  He was previously the founder of StitchFix and has a Masters degree from Stanford.  He has founded a company previously accepted by StartX
+              </Typography>
+            </Fill>
+            <Fill>
+              <Typography textColor="secondary" style={bioStyle}>
+                <strong>Nigel Eccles:</strong> Nigel is the founder/CEO of FanDuel, a unicorn start-up that has raised over $400m.  Previously, Nigel was founder/CEO of a Hubdub, a prediction market and worked at McKinsey & Company and BetFair.
+              </Typography>
+            </Fill>
+          </Layout>
+          <Layout>
+            <Fill>
+              <Typography textColor="secondary" style={bioStyle}>
+                <strong>Katina Stefanova:</strong> Founder/CEO of Marto Capital, a hedge fund with over $300m under management.  Previously, she was on the management committee of Bridgewater Associates, the world’s largest hedge fund with over $150B under management.  She has an MBA from Harvard Business School.
+              </Typography>
+            </Fill>
+            <Fill>
+              <Typography textColor="secondary" style={bioStyle}>
+                <strong>Sid Singh:</strong> COO at StartX, the Stanford-affiliated accelerator for entrepreneurs.  Previously, he led development of innovative fintech products at Citi as a VP.  He has a masters degree from Stanford Business School.
+              </Typography>
+            </Fill>
+          </Layout>
+          <Layout>
+            <Fill>
+              <Typography textColor="secondary" style={bioStyle}>
+                <strong>Lawrence Chan:</strong> Managing Director at Accenture.  Formerly a partner at McKinsey & Company.
+              </Typography>
+            </Fill>
+            <Fill>
+            </Fill>
+          </Layout>
+        </Slide>
+
         <Slide align="flex-start" bgColor="primary" id="mobile">
           <Heading size={3} textColor="secondary">
             Everywhere you'll want it
           </Heading>
           <br />
           <Fill width="100%">
-            <div className='pca-hold pca-anim mac' ref={(e) => this.phoneEl = e}>
+            <div className='pca-hold pca-anim iphone' ref={(e) => this.phoneEl = e}>
               <div className='pca-anim pca-main' style={{position: 'relative'}}>
                 <Logo largeIcon={true} motto={false} name={false}
                   style={{position: 'absolute', top: '50%', transform: 'translateY(-50%)'}} />
@@ -167,36 +221,15 @@ export default class Presentation extends React.Component {
           </Fill>
         </Slide>
 
-        <Slide bgColor="primary" id="team">
-          <Heading caps fit>Selection Team</Heading>
-          <Layout>
-            <Fill>
-              <Heading size={4} caps textColor="secondary" bgColor="white" margin={10}>
-                First person
-              </Heading>
-            </Fill>
-            <Fill>
-              <Heading size={4} caps textColor="secondary" bgColor="white" margin={10}>
-                Second person
-              </Heading>
-            </Fill>
-          </Layout>
-        </Slide>  
-
         <Slide bgColor="primary" id="signup">
           <Logo motto={false} />
-          <Grid>
-            <Typography>
-              Upcoming Token Sales
-            </Typography>
-          </Grid>
           <Signup />
           <Typography align="center" style={{marginTop: 10}}>
-            <Button raised color="primary">
+            <Button raised disabled color="primary">
               <Icon color="contrast" style={iconStyle}>insert_drive_file</Icon>
               Whitepaper
             </Button>
-            <Button raised color="accent">
+            <Button raised disabled color="accent">
               <Icon color="contrast" style={iconStyle}>insert_drive_file</Icon>
               S1 Strategy
             </Button>

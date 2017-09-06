@@ -4,13 +4,11 @@ var path = require("path");
 var express = require("express");
 var webpack = require("webpack");
 var config = require("./webpack.config");
+var devMiddleware = require('webpack-dev-middleware');
 
 var app = express();
 var compiler = webpack(config);
-
 var serverPort = process.env.PORT || 3000;
-
-var devMiddleware = require('webpack-dev-middleware');
 
 app.use(devMiddleware(compiler, {
   noInfo: true,
