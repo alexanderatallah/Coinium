@@ -1,9 +1,15 @@
+@media (max-width: 600px) {
+  .Devices {
+    zoom: 0.5;
+  }
+}
+
 /* Device animation */
 .pca-anim {
   transition: all 0.5s;
 }
 .pca-hold {
-  margin: 0 auto;
+  margin: 10px auto;
 }
 
 /* Mac wrapper */
@@ -196,4 +202,3 @@
   -o-transform: translate(0,-100%);
   transform: translate(0,-100%);
 }
-

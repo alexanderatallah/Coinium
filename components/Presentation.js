@@ -10,6 +10,7 @@ import {
   Appear, SlideSet
 } from "spectacle"
 import Signup from "./Signup"
+import Devices from "./Devices"
 import Logo from "./Logo"
 import preloader from "spectacle/lib/utils/preloader"
 import { theme } from "../themes/coinium/index.js"
@@ -19,49 +20,22 @@ require("../themes/coinium/index.css");
 
 const images = {
   bg: require("../assets/bg_skyline.svg"),
-  logo: require("../assets/logo.png"),
-  logoAlexa: require("../assets/logo-alexa.svg"),
-  logoImdb: require("../assets/logo-IMDb.svg"),
-  logoFormidable: require("../assets/logo-formidable.svg"),
-  logoMicrosoft: require("../assets/logo-microsoft.svg"),
-  logoZillow: require("../assets/logo-zillow.svg"),
-  logoGalvanize: require("../assets/logo-galvanize.svg"),
-  logoAppSheet: require("../assets/logo-appsheet.svg"),
-  logoGoDaddy: require("../assets/logo-godaddy.svg"),
-  logoNpm: require("../assets/logo-npm.svg"),
-  logoSitepen: require("../assets/logo-sitepen.svg"),
-  logoIndeed: require("../assets/logo-indeed.png"),
-  logoOpenDoor: require("../assets/logo-opendoor.svg"),
-  logoSheCodesNow: require("../assets/logo-shecodesnow.png"),
-  logoSendGrid: require("../assets/logo-sendgrid.svg"),
-  logoTwitter: require("../assets/logo-twitter.svg"),
-  logoUnbounce: require("../assets/logo-unbounce.png")
+  logo: require("../assets/logo.png")
 }
 
 preloader(images)
 
 export default class Presentation extends React.Component {
 
-  componentDidMount() {
-    window.onhashchange = (event) => {
-      if (location.hash == "#/mobile") {
-        this.mobileAnim = setInterval(this.rotateDevice.bind(this), 1500)
-      } else {
-        clearInterval(this.mobileAnim)
-      }
-    }
-  }
-
-  rotateDevice() {
-    const $el = $(this.phoneEl)
-    if ($el.hasClass('iphone')) {
-      $el.removeClass('iphone').addClass('ipad')
-    } else if ($el.hasClass('ipad')) {
-      $el.removeClass('ipad').addClass('mac')
-    } else if ($el.hasClass('mac')) {
-      $el.removeClass('mac').addClass('iphone')
-    }
-  }
+  // componentDidMount() {
+  //   window.onhashchange = (event) => {
+  //     if (location.hash == "#/mobile") {
+  //       this.mobileAnim = setInterval(this.rotateDevice.bind(this), 1500)
+  //     } else {
+  //       clearInterval(this.mobileAnim)
+  //     }
+  //   }
+  // }
 
   renderHeading(text) {
     return (
@@ -91,8 +65,9 @@ export default class Presentation extends React.Component {
       textAlign: "left"
     }
 
-    const slideStyle = {
-      overflowY: 'auto'
+    const nonSlideStyle = {
+      overflowY: 'auto',
+      alignItems: 'flex-start'
     }
 
     return (
@@ -152,7 +127,7 @@ export default class Presentation extends React.Component {
           </List>
         </Slide> */}
 
-        <Slide bgColor="primary" id="team" style={slideStyle}>
+        <Slide bgColor="primary" id="team" style={nonSlideStyle}>
           <Heading caps fit>Selection Team</Heading>
           <Layout>
             <Fill>
@@ -207,21 +182,7 @@ export default class Presentation extends React.Component {
           </Heading>
           <br />
           <Fill width="100%">
-            <div className='pca-hold pca-anim iphone' ref={(e) => this.phoneEl = e}>
-              <div className='pca-anim pca-main' style={{position: 'relative'}}>
-                <Logo largeIcon={true} motto={false} name={false}
-                  style={{position: 'absolute', top: '50%', transform: 'translateY(-50%)'}} />
-                <div className='pca-anim pca-inner'>
-                </div>
-              </div>
-              <div className='pca-anim pca-sub'>
-              <div className='pca-anim pca-top'></div>
-              <div className='pca-anim pca-mid'>
-              <div className='pca-anim pca-part'></div>
-              </div>
-              <div className='pca-anim pca-bot'></div>
-              </div>
-            </div>
+            <Devices />
           </Fill>
         </Slide>
 
