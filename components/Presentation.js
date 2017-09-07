@@ -137,7 +137,7 @@ export default class Presentation extends React.Component {
             </Fill>
             <Fill>
               <Typography style={bioStyle}>
-                <strong>Noah Kindler:</strong> Noah is an EIR at GE Ventures and previously was VP Technology/Operations at Avira, the world’s second largest consumer security company with 300m+ users.  Noah has a BS in Computer Science from Stanford University, an MBA (with distinction) from Harvard Business School and was a consultant at McKinsey & Company.  Noah has founded companies accepted into YCombinator and StartX.  Noah is based in Silicon Valley.
+                <strong>Noah Kindler:</strong> Noah was VP Technology/Operations at Avira, the world’s second largest consumer security company with 300m+ users.  Noah has a BS in Computer Science from Stanford University, an MBA (with distinction) from Harvard Business School and was a consultant at McKinsey & Company.  Noah has founded companies accepted into YCombinator and StartX.  Noah is based in Silicon Valley.
               </Typography>
             </Fill>
           </Layout>
