@@ -7,26 +7,26 @@ import Typography from 'material-ui/Typography'
 import { colors } from "../themes/coinium"
 
 const FOOTER_WIDTH = 60
-const PAGES = {
+const MODES = {
   PRESENTATION: 0,
-  FOOTER: 1
+  HELP: 1
 }
 
 export default class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      page: PAGES.PRESENTATION
+      mode: MODES.PRESENTATION
     };
   }
 
   goToSlide(slideName) {
-    this.setState({page: PAGES.PRESENTATION}, () => {
+    this.setState({mode: MODES.PRESENTATION}, () => {
       location.hash = `/${slideName}`
     })
   }
 
-  renderFooter() {
+  renderHelp() {
     const style = {
       height: '100%',
       backgroundColor: colors.primary
@@ -54,11 +54,11 @@ export default class App extends React.Component {
   }
 
   renderCurrentPage() {
-    switch (this.state.page) {
-      case PAGES.PRESENTATION:
+    switch (this.state.mode) {
+      case MODES.PRESENTATION:
         return <Presentation />
-      case PAGES.HELP:
-        return this.renderFooter()
+      case MODES.HELP:
+        return this.renderHelp()
       default:
         return (
           <Typography>Please reload</Typography>
@@ -90,10 +90,10 @@ export default class App extends React.Component {
     }
 
     const onHelpClick = () => {
-      const page = this.state.page == PAGES.HELP
-        ? PAGES.PRESENTATION
-        : PAGES.HELP
-      this.setState({page})
+      const mode = this.state.mode == MODES.HELP
+        ? MODES.PRESENTATION
+        : MODES.HELP
+      this.setState({mode})
     }
 
     return (
