@@ -109,7 +109,7 @@ export default class App extends React.Component {
             <IconButton onClick={this.goToSlide.bind(this, "home")}>
               <Icon color="contrast">home</Icon>
             </IconButton>
-            <IconButton onClick={this.goToSlide.bind(this, "info")}>
+            <IconButton onClick={this.goToSlide.bind(this, "problem")}>
               <Icon color="contrast">info_outline</Icon>
             </IconButton>
             <IconButton onClick={this.goToSlide.bind(this, "team")}>

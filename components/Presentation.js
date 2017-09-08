@@ -11,6 +11,7 @@ import {
 } from "spectacle"
 import Signup from "./Signup"
 import Devices from "./Devices"
+import TokenChart from "./TokenChart"
 import Logo from "./Logo"
 import preloader from "spectacle/lib/utils/preloader"
 import { theme } from "../themes/coinium/index.js"
@@ -84,7 +85,26 @@ export default class Presentation extends React.Component {
           <Signup />
         </Slide>
 
-        <Slide bgImage={images.bg} bgDarken={0.75} id="info">
+        <Slide id="problem">
+          <Heading fit caps>
+            You want cryptocurrency
+          </Heading>
+
+          <Heading size={6} lineHeight={1.5}>
+            but
+            with <a href="https://www.icoalert.com/" target="_blank">over 100 new types</a> created
+            every month, you don't know which will
+          </Heading>
+
+          <Heading caps fit>
+            last the longest
+          </Heading>
+
+          <TokenChart />
+
+        </Slide>
+
+        <Slide bgImage={images.bg} bgDarken={0.75} id="solution">
           <Heading size={1} fit caps lineHeight={1} textColor="tertiary">
             The Coin of Coins
           </Heading>

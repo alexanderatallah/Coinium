@@ -28,7 +28,7 @@ const brand = {
 }
 
 const colors = {
-  logo: brand.darkPurple,
+  logo: brand.lightPurple,
   primary: brand.white,
   secondary: brand.purple,
   tertiary: brand.gray,
