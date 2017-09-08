@@ -8,12 +8,13 @@ git.getLastCommit(function(err, commit) {
   var message = "Unknown commit"
 
   if (!err) {
+    // console.log(commit)
     message = "Last commit by "
       + commit.author.name
-      + ": " + commit.body
+      + ": `" + commit.subject + "`"
       + " (" + commit.shortHash + ")"
   }
-  
+
   notifySlack(message);
 });
 
@@ -27,6 +28,6 @@ function notifySlack(message) {
     text: message,
     icon_emoji: ":gear:"
   }, function(err, response) {
-    console.log(response);
+    // console.log(response);
   });
 }
