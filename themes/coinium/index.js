@@ -14,6 +14,9 @@ const brand = {
   purple: '#2C2853',
   lightPurple: '#8588AD',
 
+  // blue
+  blue: "#2D45A3",
+  lightBlue: "#C2DCF2",
   // red and its tints:
   red: "#c43a31", // brand red
   darkestRed: "#cd5244",
@@ -29,6 +32,9 @@ const brand = {
 
 const colors = {
   logo: brand.lightPurple,
+  ctaPrimary: brand.blue,
+  ctaSecondary: brand.lightBlue,
+  
   primary: brand.white,
   secondary: brand.purple,
   tertiary: brand.gray,

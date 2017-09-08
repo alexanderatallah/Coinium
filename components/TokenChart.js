@@ -19,7 +19,7 @@ export default class TokenChart extends Component {
         <LineChart data={data}
           margin={{top: 25, bottom: 10, left: 10, right: 10}}>
           <Line type='monotone' dataKey='bad'
-                stroke={colors.secondary} strokeWidth={3} />
+                stroke={colors.ctaPrimary} strokeWidth={3} />
         </LineChart>
       </ResponsiveContainer>
     )

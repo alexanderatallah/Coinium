@@ -87,14 +87,20 @@ export default class Presentation extends React.Component {
 
         <Slide id="problem">
           <Heading fit caps>
-            You want cryptocurrency
+            You want cryptocurrency,
           </Heading>
 
-          <Heading size={6} lineHeight={1.5}>
+          <hr />
+
+          <Heading size={8} lineHeight={1.3}>
             but
             with <a href="https://www.icoalert.com/" target="_blank">over 100 new types</a> created
-            every month, you don't know which will
+            every month,
+            <br/>
+            you don't know which will
           </Heading>
+
+          <hr />
 
           <Heading caps fit>
             last the longest

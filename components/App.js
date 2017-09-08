@@ -5,6 +5,7 @@ import IconButton from 'material-ui/IconButton'
 import Grid from 'material-ui/Grid'
 import Typography from 'material-ui/Typography'
 import { colors } from "../themes/coinium"
+require("../themes/coinium/index.css")
 
 const FOOTER_WIDTH = 60
 const MODES = {
