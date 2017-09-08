@@ -18,7 +18,7 @@ class Devices extends Component {
   }
 
   componentDidMount() {
-    this.mobileAnim = setInterval(this.rotateDevice.bind(this), 1500)
+    this.mobileAnim = setInterval(this.rotateDevice.bind(this), 1000)
   }
 
   componentWillUnmount() {
