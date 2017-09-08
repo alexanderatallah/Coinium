@@ -86,13 +86,13 @@ export default class Presentation extends React.Component {
         </Slide>
 
         <Slide id="problem">
-          <Heading fit caps>
+          <Heading fit caps textColor="secondary">
             You want cryptocurrency,
           </Heading>
 
           <hr />
 
-          <Heading size={8} lineHeight={1.3}>
+          <Heading size={8} lineHeight={1.3} textColor="tertiary">
             but
             with <a href="https://www.icoalert.com/" target="_blank">over 100 new types</a> created
             every month,
@@ -102,7 +102,7 @@ export default class Presentation extends React.Component {
 
           <hr />
 
-          <Heading caps fit>
+          <Heading caps fit textColor="secondary">
             last the longest
           </Heading>
 
