@@ -180,11 +180,11 @@ export default class Presentation extends React.Component {
             </Fill>
           </Layout>
           <Layout>
-            <Fill>
+            {/*<Fill>
               <Typography style={bioStyle}>
                 <strong>Katina Stefanova:</strong> Founder/CEO of Marto Capital, a hedge fund with over $300m under management.  Previously, she was on the management committee of Bridgewater Associates, the world’s largest hedge fund with over $150B under management.  She has an MBA from Harvard Business School.
               </Typography>
-            </Fill>
+            </Fill> */}
             <Fill>
               <Typography style={bioStyle}>
                 <strong>Sid Singh:</strong> COO at StartX, the Stanford-affiliated accelerator for entrepreneurs.  Previously, he led development of innovative fintech products at Citi as a VP.  He has a masters degree from Stanford Business School.
@@ -197,8 +197,8 @@ export default class Presentation extends React.Component {
                 <strong>Lawrence Chan:</strong> Managing Director at Accenture.  Formerly a partner at McKinsey & Company.
               </Typography>
             </Fill>
-            <Fill>
-            </Fill>
+            {/*<Fill>
+            </Fill> */}
           </Layout>
         </Slide>
 
