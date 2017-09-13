@@ -14,6 +14,7 @@
   "author": "Alex Atallah",
   "license": "MIT",
   "dependencies": {
+    "crypto-js": "^3.1.9-1",
     "jquery": "^3.2.1",
     "material-ui": "^1.0.0-beta.6",
     "normalize.css": "3.0.3",
