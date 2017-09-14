@@ -63,7 +63,7 @@ export default class Presentation extends React.Component {
     }
 
     const nonSlideStyle = {
-      overflowY: 'auto'
+      overflowY: 'auto',
     }
 
     return (
@@ -149,8 +149,10 @@ export default class Presentation extends React.Component {
         </Slide> */}
 
         <Slide align="flex-start" bgColor="primary" id="team" style={nonSlideStyle}>
-          <Heading caps>Selection Team</Heading>
-          <Team />
+          <Heading caps fit>Selection Team</Heading>
+          <Fill width="100%">
+            <Team />
+          </Fill>
         </Slide>
 
         <Slide align="flex-start" bgColor="primary" id="mobile">

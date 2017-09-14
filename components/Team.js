@@ -66,7 +66,8 @@ export default class Team extends Component {
   renderForm() {
     const inputStyle = {
       fontSize: 20,
-      width: 250, //262
+      width: '100%',
+      minWidth: 250, //262
       margin: "30px 0"
     }
     const helperStyle = {
