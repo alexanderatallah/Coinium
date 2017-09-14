@@ -13,6 +13,7 @@ import Signup from "./Signup"
 import Devices from "./Devices"
 import TokenChart from "./TokenChart"
 import Logo from "./Logo"
+import Team from "./Team"
 import preloader from "spectacle/lib/utils/preloader"
 import { theme } from "../themes/coinium/index.js"
 // Require CSS
@@ -61,14 +62,8 @@ export default class Presentation extends React.Component {
       marginRight: 8
     }
 
-    const bioStyle = {
-      margin: 10,
-      textAlign: "left"
-    }
-
     const nonSlideStyle = {
-      overflowY: 'auto',
-      alignItems: 'flex-start'
+      overflowY: 'auto'
     }
 
     return (
@@ -153,53 +148,9 @@ export default class Presentation extends React.Component {
           </List>
         </Slide> */}
 
-        <Slide bgColor="primary" id="team" style={nonSlideStyle}>
-          <Heading caps fit>Selection Team</Heading>
-          <Layout>
-            <Fill>
-              <Typography style={bioStyle}>
-                <strong>Vinny Lingham:</strong> Founder/CEO of Civic.  Civic had one of the largest and most successful token sales.  Vinny is also a frequent speaker on blockchain technologies and industry trends.  He was previously the founder of Gyft (acq by FirstData) and Yola.  Vinny is based in Silicon Valley.
-              </Typography>
-            </Fill>
-            <Fill>
-              <Typography style={bioStyle}>
-                <strong>Noah Kindler:</strong> Noah was VP Technology/Operations at Avira, the world’s second largest consumer security company with 300m+ users.  Noah has a BS in Computer Science from Stanford University and an MBA (with distinction) from Harvard Business School. He was a consultant at McKinsey & Company, and he has founded companies accepted into YCombinator and StartX.  Noah is based in Silicon Valley.
-              </Typography>
-            </Fill>
-          </Layout>
-          <Layout>
-            <Fill>
-              <Typography style={bioStyle}>
-                <strong>George Li:</strong> George is the Founder/CEO of WeTrust.io, a successful identity token company.  He was previously the founder of StitchFix and has a Masters degree from Stanford.  He has founded a company previously accepted by StartX.
-              </Typography>
-            </Fill>
-            <Fill>
-              <Typography style={bioStyle}>
-                <strong>Nigel Eccles:</strong> Nigel is the founder/CEO of FanDuel, a unicorn startup that has raised over $400m.  Previously, Nigel was founder/CEO of a Hubdub, a prediction market, and he worked at McKinsey & Company and BetFair.
-              </Typography>
-            </Fill>
-          </Layout>
-          <Layout>
-            {/*<Fill>
-              <Typography style={bioStyle}>
-                <strong>Katina Stefanova:</strong> Founder/CEO of Marto Capital, a hedge fund with over $300m under management.  Previously, she was on the management committee of Bridgewater Associates, the world’s largest hedge fund with over $150B under management.  She has an MBA from Harvard Business School.
-              </Typography>
-            </Fill> */}
-            <Fill>
-              <Typography style={bioStyle}>
-                <strong>Sid Singh:</strong> COO at StartX, the Stanford-affiliated accelerator for entrepreneurs.  Previously, he led development of innovative fintech products at Citi as a VP.  He has a masters degree from Stanford Business School.
-              </Typography>
-            </Fill>
-          </Layout>
-          <Layout>
-            <Fill>
-              <Typography style={bioStyle}>
-                <strong>Lawrence Chan:</strong> Managing Director at Accenture.  Formerly a partner at McKinsey & Company.
-              </Typography>
-            </Fill>
-            {/*<Fill>
-            </Fill> */}
-          </Layout>
+        <Slide align="flex-start" bgColor="primary" id="team" style={nonSlideStyle}>
+          <Heading caps>Selection Team</Heading>
+          <Team />
         </Slide>
 
         <Slide align="flex-start" bgColor="primary" id="mobile">
